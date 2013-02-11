@@ -1,0 +1,122 @@
+==16732== Memcheck, a memory error detector
+==16732== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==16732== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==16732== Command: RunVoting
+==16732== 
+valgrind RunVoting < RunVoting.in
+Candidate #1
+Candidate #2
+
+Candidate #1
+Candidate #2
+
+Candidate #1
+
+Candidate #1
+
+Candidate #1
+
+Candidate #3
+
+Candidate #2
+
+Candidate #1
+
+Candidate #2
+
+Candidate #11
+
+Candidate #2
+
+Candidate #3
+
+Candidate #1
+
+Candidate #1
+
+Candidate #1
+
+Candidate #12
+
+Candidate #12
+
+Candidate #3
+
+Candidate #3
+
+Candidate #11
+
+Candidate #7
+
+Candidate #3
+
+Candidate #5
+
+Candidate #6
+
+Candidate #1
+
+Candidate #1
+
+Candidate #7
+
+Candidate #3
+
+Candidate #8
+
+Candidate #5
+
+Candidate #8
+
+Candidate #13
+
+Candidate #5
+
+Candidate #2
+
+Candidate #4
+
+Candidate #1
+
+Candidate #4
+
+Candidate #3
+
+Candidate #2
+
+Candidate #6
+
+Candidate #16
+
+Candidate #4
+
+Candidate #1
+
+Candidate #1
+
+Candidate #3
+
+Candidate #2
+
+Candidate #2
+
+Candidate #10
+
+Candidate #2
+
+Candidate #6
+
+Candidate #3
+
+Candidate #5
+
+Candidate #2
+==16732== 
+==16732== HEAP SUMMARY:
+==16732==     in use at exit: 0 bytes in 0 blocks
+==16732==   total heap usage: 56,815 allocs, 56,815 frees, 5,259,817 bytes allocated
+==16732== 
+==16732== All heap blocks were freed -- no leaks are possible
+==16732== 
+==16732== For counts of detected and suppressed errors, rerun with: -v
+==16732== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
