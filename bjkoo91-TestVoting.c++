@@ -75,6 +75,7 @@ struct TestVoting : CppUnit::TestFixture {
         std::vector <int> c_rank = {1};
         std::string rank = "1";
         struct ballot vote;
+        vote.pos = 0;
         voting_populate_ballot (rank, vote);
         CPPUNIT_ASSERT (vote.ranks.size () == 1);
         CPPUNIT_ASSERT (vote.pos == 0);
@@ -87,6 +88,7 @@ struct TestVoting : CppUnit::TestFixture {
         std::vector <int> c_rank = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         std::string rank = "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15";
         struct ballot vote;
+        vote.pos = 0;
         voting_populate_ballot (rank, vote);
         CPPUNIT_ASSERT (vote.ranks.size () == 15);
         CPPUNIT_ASSERT (vote.pos == 0);
@@ -99,6 +101,7 @@ struct TestVoting : CppUnit::TestFixture {
         std::vector <int> c_rank = {0, -1, -2, -3};
         std::string rank = "0 -1 -2 -3";
         struct ballot vote;
+        vote.pos = 0;
         voting_populate_ballot (rank, vote);
         CPPUNIT_ASSERT (vote.ranks.size () == 4);
         CPPUNIT_ASSERT (vote.pos == 0);
@@ -111,6 +114,7 @@ struct TestVoting : CppUnit::TestFixture {
         std::vector <int> c_rank = {1, 1, 1, 1, 1, 2, 2, 2, 2, 2};
         std::string rank = "1 1 1 1 1 2 2 2 2 2";
         struct ballot vote;
+        vote.pos = 0;
         voting_populate_ballot (rank, vote);
         CPPUNIT_ASSERT (vote.ranks.size () == 10);
         CPPUNIT_ASSERT (vote.pos == 0);
@@ -123,6 +127,7 @@ struct TestVoting : CppUnit::TestFixture {
         std::vector <int> c_rank = {1, 20, 2, 19, 3, 18, 4, 17, 5, 16, 6, 15, 7, 14, 8, 13, 9, 12, 10, 11};
         std::string rank = "1 20 2 19 3 18 4 17 5 16 6 15 7 14 8 13 9 12 10 11";
         struct ballot vote;
+        vote.pos = 0;
         voting_populate_ballot (rank, vote);
         CPPUNIT_ASSERT (vote.ranks.size () == 20);
         CPPUNIT_ASSERT (vote.pos == 0);
