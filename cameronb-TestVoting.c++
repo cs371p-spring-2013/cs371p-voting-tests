@@ -424,7 +424,15 @@ struct TestVoting : CppUnit::TestFixture
 		std::ostringstream w;
 		voting_case(r, w);
 		CPPUNIT_ASSERT(w.str() == "Cameron\nDoug\n");
-	}  
+	}
+	
+	// --------------------
+	// Candidate::Candidate
+	// --------------------
+	void test_candidate() {
+	    Candidate testCandidate;
+	    CPPUNIT_ASSERT(testCandidate.inRace == true);
+	}
 	
 	
 	// -----
@@ -452,6 +460,7 @@ struct TestVoting : CppUnit::TestFixture
 	CPPUNIT_TEST(test_case_1);
 	CPPUNIT_TEST(test_case_2);
 	CPPUNIT_TEST(test_case_3);
+	CPPUNIT_TEST(test_candidate);
 	CPPUNIT_TEST_SUITE_END();
 };
 
