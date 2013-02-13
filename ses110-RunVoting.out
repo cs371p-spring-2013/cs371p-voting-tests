@@ -1,20 +1,19 @@
-numCases 1
+numCases 46
 ----------------Start case 0-----------
 6 8 5 2 9 4 1 3 11 7 
 6 3 9 8 2 4 5 1 7 11 
 Winner(s): Ashlyn Foskey
 ----------------END case-----------
 
-numCases 3
-----------------Start case 0-----------
+----------------Start case 1-----------
 Winner(s): Lonny Goff
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 2-----------
 Winner(s): Kesha Frith
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 3-----------
 1 5 3 4 
 1 3 4 5 
 4 2 5 1 
@@ -25,95 +24,92 @@ Winner(s): Catrice Faye
 Winner(s): Refugia Keel
 ----------------END case-----------
 
-numCases 4
-----------------Start case 0-----------
+----------------Start case 4-----------
 Winner(s): Gidget Wilker
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 5-----------
 2 6 3 4 5 
 Winner(s): Sheilah Bogert
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 6-----------
 6 8 1 4 5 7 2 
 7 2 8 5 3 6 1 
 Winner(s): Sharda Maggi
 ----------------END case-----------
 
-----------------Start case 3-----------
+----------------Start case 7-----------
 Winner(s): Jean Zuk
 ----------------END case-----------
 
-numCases 5
-----------------Start case 0-----------
+----------------Start case 8-----------
 Winner(s): Kiesha Huitt
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 9-----------
 5 8 4 2 6 7 1 
 Winner(s): Zandra Capel
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 10-----------
 Winner(s): Mardell Vickers
 Winner(s): Jean Zuk
 Winner(s): Adriane Gaw
 ----------------END case-----------
 
-----------------Start case 3-----------
+----------------Start case 11-----------
 3 1 8 4 6 9 11 5 10 7 
 Winner(s): Valrie Bloomfield
 ----------------END case-----------
 
-----------------Start case 4-----------
+----------------Start case 12-----------
 Winner(s): Byron Vicario
 ----------------END case-----------
 
-numCases 8
-----------------Start case 0-----------
+----------------Start case 13-----------
 Winner(s): Alisha Haddock
 Winner(s): Halina Mantooth
 Winner(s): Edmund Moorehouse
 Winner(s): Gillian Chabot
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 14-----------
 2 3 1 4 
 3 1 4 
 Winner(s): Yer Descoteaux
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 15-----------
 Winner(s): Treena Rabon
 Winner(s): Salena Edelen
 ----------------END case-----------
 
-----------------Start case 3-----------
+----------------Start case 16-----------
 17 9 19 14 16 4 18 10 3 15 5 8 13 11 6 1 7 20 12 
 9 19 14 16 4 18 10 3 15 5 8 13 11 6 1 7 20 12 
 Winner(s): Elmira Sivils
 Winner(s): Luanne Cofield
 ----------------END case-----------
 
-----------------Start case 4-----------
+----------------Start case 17-----------
 Winner(s): Adriane Gaw
 Winner(s): Toshiko Camarena
 ----------------END case-----------
 
-----------------Start case 5-----------
+----------------Start case 18-----------
 6 8 9 7 5 12 11 1 3 4 10 14 13 
 Winner(s): Sheilah Bogert
 ----------------END case-----------
 
-----------------Start case 6-----------
+----------------Start case 19-----------
 4 1 5 2 
 1 5 2 
 Winner(s): Luanne Cofield
 Winner(s): Adriane Gaw
 ----------------END case-----------
 
-----------------Start case 7-----------
+----------------Start case 20-----------
 11 2 7 13 9 10 4 6 12 8 1 5 14 
 2 7 13 9 10 4 6 12 8 1 5 14 
 12 7 14 3 2 1 11 4 5 8 9 13 10 
@@ -121,8 +117,7 @@ Winner(s): Adriane Gaw
 Winner(s): Gerda Provenza
 ----------------END case-----------
 
-numCases 3
-----------------Start case 0-----------
+----------------Start case 21-----------
 6 5 4 3 2 1 
 5 4 3 2 1 
 Winner(s): Bernadette Kratochvil
@@ -130,25 +125,24 @@ Winner(s): Shelby Alphonse
 Winner(s): Zenobia Halsted
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 22-----------
 2 5 4 3 
 Winner(s): Jeff Blosser
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 23-----------
 3 4 5 2 
 Winner(s): Dagmar Alix
 ----------------END case-----------
 
-numCases 4
-----------------Start case 0-----------
+----------------Start case 24-----------
 1 4 6 2 7 5 
 1 5 3 4 7 6 
 1 3 2 4 5 7 
 Winner(s): Ashly Liberty
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 25-----------
 9 6 3 4 2 11 5 7 8 10 12 
 6 3 4 2 11 5 7 8 10 12 
 12 10 2 6 11 5 1 9 7 8 4 
@@ -157,23 +151,22 @@ Winner(s): Gillian Chabot
 Winner(s): Mardell Vickers
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 26-----------
 16 14 4 3 7 15 8 9 12 10 2 1 6 13 5 
 Winner(s): Tula Ricco
 ----------------END case-----------
 
-----------------Start case 3-----------
+----------------Start case 27-----------
 Winner(s): Jordon Berkman
 ----------------END case-----------
 
-numCases 5
-----------------Start case 0-----------
+----------------Start case 28-----------
 5 6 7 4 2 1 
 Winner(s): Jordon Berkman
 Winner(s): Dagmar Alix
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 29-----------
 2 4 1 6 5 
 4 1 6 5 
 1 6 5 
@@ -184,37 +177,36 @@ Winner(s): Dagmar Alix
 Winner(s): Alessandra Payson
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 30-----------
 Winner(s): Dagmar Alix
 ----------------END case-----------
 
-----------------Start case 3-----------
+----------------Start case 31-----------
 14 4 6 9 12 7 11 10 8 1 13 3 2 
 14 6 2 10 4 8 1 5 9 12 13 11 7 
 14 2 13 7 1 12 3 6 5 11 4 10 8 
 Winner(s): Andrew Boatwright
 ----------------END case-----------
 
-----------------Start case 4-----------
+----------------Start case 32-----------
 Winner(s): Benny Stockton
 Winner(s): Fern Irish
 ----------------END case-----------
 
-numCases 4
-----------------Start case 0-----------
+----------------Start case 33-----------
 Winner(s): Adriane Gaw
 Winner(s): Toshiko Camarena
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 34-----------
 Winner(s): Shelby Alphonse
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 35-----------
 Winner(s): Alessandra Payson
 ----------------END case-----------
 
-----------------Start case 3-----------
+----------------Start case 36-----------
 1 2 
 2 
 2 1 
@@ -224,23 +216,21 @@ Winner(s): Alessandra Payson
 Winner(s): Mardell Vickers
 ----------------END case-----------
 
-numCases 2
-----------------Start case 0-----------
+----------------Start case 37-----------
 Winner(s): Fern Irish
 Winner(s): Zachery Touchton
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 38-----------
 Winner(s): Sherice Kozlowski
 Winner(s): Lanny Maultsby
 ----------------END case-----------
 
-numCases 2
-----------------Start case 0-----------
+----------------Start case 39-----------
 Winner(s): Sook Hornberger
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 40-----------
 18 16 5 4 11 17 20 14 15 2 6 9 13 3 7 8 12 1 10 
 16 5 4 11 17 20 14 15 2 6 9 13 3 7 8 12 1 10 
 5 4 11 17 20 14 15 2 6 9 13 3 7 8 12 1 10 
@@ -248,24 +238,23 @@ Winner(s): Sook Hornberger
 Winner(s): Holley Palermo
 ----------------END case-----------
 
-numCases 4
-----------------Start case 0-----------
+----------------Start case 41-----------
 12 4 9 10 11 3 5 8 13 7 1 2 
 Winner(s): Charlena Vancamp
 ----------------END case-----------
 
-----------------Start case 1-----------
+----------------Start case 42-----------
 Winner(s): Nicolas Lynde
 ----------------END case-----------
 
-----------------Start case 2-----------
+----------------Start case 43-----------
 1 5 15 4 12 3 10 8 7 6 9 14 13 11 2 
 5 15 4 12 3 10 8 7 6 9 14 13 11 2 
 Winner(s): Charlena Vancamp
 Winner(s): Celia Debonis
 ----------------END case-----------
 
-----------------Start case 3-----------
+----------------Start case 44-----------
 Winner(s): Nicolas Lynde
 Winner(s): Sharda Maggi
 Winner(s): Lanny Maultsby
@@ -273,8 +262,8 @@ Winner(s): Magda Kukowski
 Winner(s): Jeff Blosser
 ----------------END case-----------
 
-numCases 1
-----------------Start case 0-----------
+----------------Start case 45-----------
 19 15 3 1 5 18 7 16 17 13 20 2 11 10 12 8 4 9 6 
 Winner(s): Zachery Touchton
 ----------------END case-----------
+
