@@ -1,0 +1,10 @@
+g++ -pedantic -std=c++0x -Wall ReadVoting.c++ SolveVoting.c++ Voting.c++ TestVoting.c++ -o TestVoting -lcppunit -ldl
+TestVoting
+TestVoting.c++
+.......................................
+
+
+OK (39 tests)
+
+
+Done.

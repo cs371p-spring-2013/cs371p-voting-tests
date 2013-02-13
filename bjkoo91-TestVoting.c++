@@ -225,7 +225,7 @@ struct TestVoting : CppUnit::TestFixture {
         struct ballot ballot_2;
         ballot_2.pos = 0; ballot_2.ranks.push_back (1);
         struct ballot ballot_3;
-        ballot_2.pos = 0; ballot_3.ranks.push_back (1);
+        ballot_3.pos = 0; ballot_3.ranks.push_back (1);
         all_ballots.push_back (ballot_1);
         all_ballots.push_back (ballot_2);
         all_ballots.push_back (ballot_3);
@@ -518,7 +518,7 @@ struct TestVoting : CppUnit::TestFixture {
     CPPUNIT_TEST (test_count_ballot_4);
     CPPUNIT_TEST (test_count_ballot_5);
     
-    CPPUNIT_TEST (test_round_1);
+   CPPUNIT_TEST (test_round_1);
     CPPUNIT_TEST (test_round_2);
     CPPUNIT_TEST (test_round_3);
     CPPUNIT_TEST (test_round_4);
