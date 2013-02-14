@@ -1,3 +1,5 @@
+g++ -pedantic -std=c++0x -Wall Voting.c++ TestVoting.c++ -o TestVoting -lcppunit -ldl
+valgrind TestVoting
 TestVoting.c++
 .......................
 
