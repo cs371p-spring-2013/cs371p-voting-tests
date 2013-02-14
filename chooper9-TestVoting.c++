@@ -265,6 +265,28 @@ struct TestVoting : CppUnit::TestFixture {
     CPPUNIT_ASSERT(min == 1);
   }
 
+  void test_check_2 () {
+    unsigned max = 0;
+    unsigned min = 4;
+    vector<unsigned> most;
+    vector<unsigned> least;
+    vector<vector<string> > votes;
+    vector<string> candidates;
+    candidates.push_back("Batman");
+    candidates.push_back("Spiderman");
+    vector<string> vs;
+    vs.push_back("1 2");
+    vs.push_back("1 2");
+    votes.push_back(vs);
+    vs.clear();
+    vs.push_back("2 1");
+    vs.push_back("2 1");
+    votes.push_back(vs);
+    check(max, min, most, least, candidates, votes);
+    CPPUNIT_ASSERT(max == 2);
+    CPPUNIT_ASSERT(min == 2);
+  }
+
   // ---
   // rmLosers
   // ---
@@ -308,6 +330,86 @@ struct TestVoting : CppUnit::TestFixture {
     CPPUNIT_ASSERT(votes.at(2).empty());
   }
 
+  void test_rmLosers_1 () {
+    vector<unsigned> losers;
+    losers.push_back(1);
+    losers.push_back(2);
+    vector<vector<string> > votes;
+    vector<string> candidates;
+    candidates.push_back("Mammon");
+    candidates.push_back("Baal");
+    candidates.push_back("Asmodeus");
+    vector<string> vs;
+    vs.push_back("1 2 3");
+    vs.push_back("1 3 2");
+    votes.push_back(vs);
+    vs.clear();
+    vs.push_back("2 1 3");
+    votes.push_back(vs);
+    vs.clear();
+    vs.push_back("3 2 1");
+    votes.push_back(vs);
+    ostringstream w;
+    ostringstream x;
+    for(unsigned i = 0; i < votes.size(); ++i) {
+      for(unsigned j = 0; j < votes.at(i).size(); ++j) {
+        x << votes[i][j] << endl;
+      }
+    }
+    w << candidates[0] << " " << candidates[1] << " " << candidates[2] << endl;
+    rmLosers(losers, votes);
+    ostringstream y;
+    for(unsigned i = 0; i < votes.size(); ++i) {
+      for(unsigned j = 0; j < votes.at(i).size(); ++j) {
+        y << votes[i][j] << endl;
+      }
+    }
+    CPPUNIT_ASSERT(w.str() == "Mammon Baal Asmodeus\n");
+    CPPUNIT_ASSERT(x.str() == y.str());
+    CPPUNIT_ASSERT(votes.at(1).empty());
+    CPPUNIT_ASSERT(votes.at(2).empty());
+  }
+
+  void test_rmLosers_2 () {
+    vector<unsigned> losers (1, 0);
+    vector<vector<string> > votes;
+    vector<string> candidates;
+    candidates.push_back("Ratatosk");
+    candidates.push_back("Gilgamesh");
+    candidates.push_back("Nebilim");
+    vector<string> vs;
+    vs.push_back("1 2 3");
+    votes.push_back(vs);
+    vs.clear();
+    vs.push_back("2 1 3");
+    vs.push_back("2 3 1");
+    votes.push_back(vs);
+    vs.clear();
+    vs.push_back("3 1 2");
+    vs.push_back("3 2 1");
+    votes.push_back(vs);
+    ostringstream w;
+    ostringstream x;
+    for(unsigned i = 0; i < votes.size(); ++i) {
+      for(unsigned j = 0; j < votes.at(i).size(); ++j) {
+        x << votes[i][j] << endl;
+      }
+    }
+    w << candidates[0] << " " << candidates[1] << " " << candidates[2] << endl;
+    rmLosers(losers, votes);
+    ostringstream y;
+    for(unsigned i = 0; i < votes.size(); ++i) {
+      for(unsigned j = 0; j < votes.at(i).size(); ++j) {
+        y << votes[i][j] << endl;
+      }
+    }
+    CPPUNIT_ASSERT(w.str() == "Ratatosk Gilgamesh Nebilim\n");
+    CPPUNIT_ASSERT(x.str() == "1 2 3\n2 1 3\n2 3 1\n3 1 2\n3 2 1\n");
+    CPPUNIT_ASSERT(y.str() == "2 1 3\n2 3 1\n1 2 3\n3 1 2\n3 2 1\n");
+    CPPUNIT_ASSERT(votes.at(0).empty());
+  }
+
+
   // ---
   // print
   // ---
@@ -350,6 +452,19 @@ struct TestVoting : CppUnit::TestFixture {
     CPPUNIT_ASSERT(w.str() == "Lloyd Irving\n");
   }
 
+  void test_solve_1 () {
+    istringstream r("2\n\n2\nYoko Ono\nYoko Okino\n2 1\n2 1\n2 1\n2 1\n\n2\nBanjo\nKazooie\n1 2\n2 1\n1 2\n2 1\n");
+    ostringstream w;
+    voting_solve(r, w);
+    CPPUNIT_ASSERT(w.str() == "Yoko Okino\n\nBanjo\nKazooie\n");
+  }
+
+  void test_solve_2 () {
+    istringstream r("1\n\n8\nRoxanne\nBrawly\nWattson\nFlannery\nNorman\nWinona\nTate & Liza\nWallace\n8 7 6 5 4 3 2 1\n");
+    ostringstream w;
+    voting_solve(r, w);
+    CPPUNIT_ASSERT(w.str() == "Wallace\n");
+  }
 
 
   // ---
@@ -371,11 +486,16 @@ struct TestVoting : CppUnit::TestFixture {
   CPPUNIT_TEST(test_score_2);
   CPPUNIT_TEST(test_check);
   CPPUNIT_TEST(test_check_1);
+  CPPUNIT_TEST(test_check_2);
   CPPUNIT_TEST(test_rmLosers);
+  CPPUNIT_TEST(test_rmLosers_1);
+  CPPUNIT_TEST(test_rmLosers_2);
   CPPUNIT_TEST(test_print);
   CPPUNIT_TEST(test_print_1);
   CPPUNIT_TEST(test_print_2);
   CPPUNIT_TEST(test_solve);
+  CPPUNIT_TEST(test_solve_1);
+  CPPUNIT_TEST(test_solve_2);
   CPPUNIT_TEST_SUITE_END();
 };
 
