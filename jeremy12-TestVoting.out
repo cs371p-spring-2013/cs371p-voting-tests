@@ -1,0 +1,218 @@
+valgrind TestVoting
+==6163== Memcheck, a memory error detector
+==6163== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==6163== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==6163== Command: TestVoting
+==6163== 
+TestVoting.c++
+....................==6163== Invalid read of size 4
+==6163==    at 0x40381E: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403297: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x413E00: TestVoting::test_winner_2() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54145: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A09: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x60e283c is 4 bytes before a block of size 32 alloc'd
+==6163==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6163==    by 0x40A243: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x408390: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40909E: void std::vector<int, std::allocator<int> >::_M_insert_aux<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4070CD: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4054C9: std::vector<int, std::allocator<int> >::push_back(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403258: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x413E00: TestVoting::test_winner_2() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163== 
+==6163== Invalid read of size 8
+==6163==    at 0x4046F4: std::vector<Ballot, std::allocator<Ballot> >::size() const (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4041B7: Candidate::numVoters() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40383C: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403297: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x413E00: TestVoting::test_winner_2() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x60dcae0 is not stack'd, malloc'd or (recently) free'd
+==6163== 
+==6163== Invalid read of size 8
+==6163==    at 0x4046FF: std::vector<Ballot, std::allocator<Ballot> >::size() const (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4041B7: Candidate::numVoters() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40383C: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403297: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x413E00: TestVoting::test_winner_2() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x60dcad8 is not stack'd, malloc'd or (recently) free'd
+==6163== 
+.==6163== Invalid read of size 4
+==6163==    at 0x40381E: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403297: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x414890: TestVoting::test_winner_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54145: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A09: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x611c40c is 4 bytes before a block of size 32 alloc'd
+==6163==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6163==    by 0x40A243: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x408390: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40909E: void std::vector<int, std::allocator<int> >::_M_insert_aux<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4070CD: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4054C9: std::vector<int, std::allocator<int> >::push_back(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403258: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x414890: TestVoting::test_winner_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163== 
+.==6163== Invalid read of size 4
+==6163==    at 0x40381E: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403297: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403028: voting_eval(std::vector<std::string, std::allocator<std::string> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x414EF4: TestVoting::test_eval_1() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54145: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x6143eac is 4 bytes before a block of size 16 alloc'd
+==6163==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6163==    by 0x40A243: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x408390: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40909E: void std::vector<int, std::allocator<int> >::_M_insert_aux<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4070CD: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4054C9: std::vector<int, std::allocator<int> >::push_back(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403258: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403028: voting_eval(std::vector<std::string, std::allocator<std::string> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x414EF4: TestVoting::test_eval_1() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163== 
+..==6163== Invalid read of size 4
+==6163==    at 0x40381E: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403297: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403028: voting_eval(std::vector<std::string, std::allocator<std::string> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x415B60: TestVoting::test_eval_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54145: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x614905c is 4 bytes before a block of size 128 alloc'd
+==6163==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6163==    by 0x40A243: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x408390: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40909E: void std::vector<int, std::allocator<int> >::_M_insert_aux<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4070CD: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4054C9: std::vector<int, std::allocator<int> >::push_back(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403258: voting_winner(Election&, int) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x403028: voting_eval(std::vector<std::string, std::allocator<std::string> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x415B60: TestVoting::test_eval_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163== 
+......==6163== Invalid read of size 4
+==6163==    at 0x40381E: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x417D84: TestVoting::test_sort_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54145: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A09: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E5BEC8: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x61ee42c is 4 bytes before a block of size 32 alloc'd
+==6163==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6163==    by 0x40A243: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x408390: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40909E: void std::vector<int, std::allocator<int> >::_M_insert_aux<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4070CD: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4054C9: std::vector<int, std::allocator<int> >::push_back(int&&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x417D4E: TestVoting::test_sort_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163== 
+==6163== Invalid read of size 8
+==6163==    at 0x4046F4: std::vector<Ballot, std::allocator<Ballot> >::size() const (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4041B7: Candidate::numVoters() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40383C: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x417D84: TestVoting::test_sort_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54145: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x61e5470 is not stack'd, malloc'd or (recently) free'd
+==6163== 
+==6163== Invalid read of size 8
+==6163==    at 0x4046FF: std::vector<Ballot, std::allocator<Ballot> >::size() const (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4041B7: Candidate::numVoters() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x40383C: voting_sort(std::vector<int, std::allocator<int> >&, Election&) (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x417D84: TestVoting::test_sort_3() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x41DFF2: CppUnit::TestCaller<TestVoting>::runTest() (in /v/filer4b/v38q001/jeremy12/cs371p-voting/TestVoting)
+==6163==    by 0x4E53EE0: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E49F64: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E50F21: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E59A84: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E53BEE: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54222: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==    by 0x4E54145: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==6163==  Address 0x61e5468 is not stack'd, malloc'd or (recently) free'd
+==6163== 
+...
+
+
+OK (33 tests)
+
+
+Done.
+==6163== 
+==6163== HEAP SUMMARY:
+==6163==     in use at exit: 0 bytes in 0 blocks
+==6163==   total heap usage: 26,747 allocs, 26,747 frees, 2,013,441 bytes allocated
+==6163== 
+==6163== All heap blocks were freed -- no leaks are possible
+==6163== 
+==6163== For counts of detected and suppressed errors, rerun with: -v
+==6163== ERROR SUMMARY: 15 errors from 9 contexts (suppressed: 2 from 2)
