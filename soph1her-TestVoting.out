@@ -1,0 +1,15 @@
+TestVoting.c++
+......F
+
+
+!!!FAILURES!!!
+Test Results:
+Run:  6   Failures: 1   Errors: 0
+
+
+1) test: TestVoting::test_solve_3 (F) line: 69 TestVoting.c++
+assertion failed
+- Expression: w.str() == "Cand #1\n\nCand #1\n\Cand #2\nCand #3\nCand #4\n\nCand #4\n\nCand #4\n\nCand #2\n\nCand #1\n\nCand #5\n\nCand #3\n\nCand #2\n\nCand #10\n"
+
+
+Done.
