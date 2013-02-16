@@ -1,9 +1,0 @@
-valgrind TestVoting
-TestVoting.c++
-..........
-
-
-OK (10 tests)
-
-
-Done.

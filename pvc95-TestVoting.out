@@ -1,0 +1,40 @@
+==5411== Memcheck, a memory error detector
+==5411== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==5411== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==5411== Command: TestVoting.c++.app
+==5411== 
+TestVoting.c++
+.......................E.E...
+
+
+!!!FAILURES!!!
+Test Results:
+Run:  27   Failures: 0   Errors: 2
+
+
+1) test: TestVoting::test_ballot_reassign_2 (E) 
+uncaught exception of type std::out_of_range
+- vector::_M_range_check
+
+
+2) test: TestVoting::test_ballot_reassign_3 (E) 
+uncaught exception of type std::out_of_range
+- vector::_M_range_check
+
+
+Done.
+==5411== 
+==5411== HEAP SUMMARY:
+==5411==     in use at exit: 122,880 bytes in 6 blocks
+==5411==   total heap usage: 1,218 allocs, 1,212 frees, 254,510 bytes allocated
+==5411== 
+==5411== LEAK SUMMARY:
+==5411==    definitely lost: 0 bytes in 0 blocks
+==5411==    indirectly lost: 0 bytes in 0 blocks
+==5411==      possibly lost: 0 bytes in 0 blocks
+==5411==    still reachable: 122,880 bytes in 6 blocks
+==5411==         suppressed: 0 bytes in 0 blocks
+==5411== Rerun with --leak-check=full to see details of leaked memory
+==5411== 
+==5411== For counts of detected and suppressed errors, rerun with: -v
+==5411== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
